@@ -164,12 +164,15 @@ extension PostView {
 
 struct PostView_Previews: PreviewProvider
 {
+    static let vm = StoreData()
+    
     static var previews: some View
     {
         GeometryReader { proxy in
             let width = proxy.size.width / 2.77
             
             PostView(width: width)
+                .environmentObject(vm)
         }
     }
 }

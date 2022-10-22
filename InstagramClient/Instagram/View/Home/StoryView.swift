@@ -73,8 +73,11 @@ extension StoryView {
 
 struct StoryView_Previews: PreviewProvider
 {
+    static let vm = StoreData()
+    
     static var previews: some View
     {
         ContentView()
+            .environmentObject(vm)
     }
 }

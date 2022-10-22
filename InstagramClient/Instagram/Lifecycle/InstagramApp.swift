@@ -22,7 +22,7 @@ struct InstagramApp: App
     }
 }
 
-class StoreData: ObservableObject
+final class StoreData: ObservableObject
 {
     @Published var following = [User]()
     

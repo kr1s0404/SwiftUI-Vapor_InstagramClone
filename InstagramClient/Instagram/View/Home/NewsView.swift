@@ -9,35 +9,46 @@ import SwiftUI
 
 struct NewsView: View
 {
-    @EnvironmentObject var vm: StoreData
+    @StateObject var vm = NewsViewModel()
     
     var body: some View
     {
-        HStack
-        {
-            Image(systemName: "flag.square")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 20)
-            
-            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
-                .font(.system(size: 12))
-            
-            Image(systemName: "xmark")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 12)
-                .foregroundColor(.secondary)
+        if vm.showNews {
+            if let newsText = vm.news?.subject {
+                HStack
+                {
+                    Image(systemName: "flag.square")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 20)
+                    
+                    Text(newsText)
+                        .font(.system(size: 12))
+                    
+                    Button {
+                        vm.showNews.toggle()
+                    } label: {
+                        Image(systemName: "xmark")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 12)
+                            .foregroundColor(.secondary)
+                    }
+                }
+                .padding(10)
+            }
         }
-        .padding(10)
     }
 }
 
 struct NewsView_Previews: PreviewProvider
 {
+    static let vm = NewsViewModel()
+    
     static var previews: some View
     {
         NewsView()
+            .environmentObject(vm)
             .previewLayout(.sizeThatFits)
     }
 }

@@ -26,6 +26,7 @@
 		2FE39521290389240078ADF3 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE39520290389240078ADF3 /* Comment.swift */; };
 		2FE395232903895E0078ADF3 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE395222903895E0078ADF3 /* News.swift */; };
 		2FE3952629038A910078ADF3 /* MockUpData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE3952529038A910078ADF3 /* MockUpData.swift */; };
+		2FE39529290391EC0078ADF3 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE39528290391EC0078ADF3 /* NewsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		2FE39520290389240078ADF3 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		2FE395222903895E0078ADF3 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		2FE3952529038A910078ADF3 /* MockUpData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUpData.swift; sourceTree = "<group>"; };
+		2FE39528290391EC0078ADF3 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 		2FE39507290348240078ADF3 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2FE39527290391DD0078ADF3 /* NewsViewModel */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -186,6 +189,14 @@
 				2FE3952529038A910078ADF3 /* MockUpData.swift */,
 			);
 			path = Preview;
+			sourceTree = "<group>";
+		};
+		2FE39527290391DD0078ADF3 /* NewsViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2FE39528290391EC0078ADF3 /* NewsViewModel.swift */,
+			);
+			path = NewsViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +279,7 @@
 				2FE394F1290347A40078ADF3 /* InstagramApp.swift in Sources */,
 				2FE3951F290388C90078ADF3 /* Post.swift in Sources */,
 				2FE39510290359970078ADF3 /* Font.swift in Sources */,
+				2FE39529290391EC0078ADF3 /* NewsViewModel.swift in Sources */,
 				2FE3951D290387BD0078ADF3 /* DoneButton.swift in Sources */,
 				2FE39503290347D70078ADF3 /* HttpClient.swift in Sources */,
 				2FE39504290347D70078ADF3 /* SheetType.swift in Sources */,
