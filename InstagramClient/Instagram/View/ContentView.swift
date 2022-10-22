@@ -13,14 +13,18 @@ struct ContentView: View
     
     @State private var selectedTab: Tab = .Home
     
+    init() {
+        UITabBar.appearance().backgroundColor = .systemBackground
+    }
+    
     var body: some View
     {
         GeometryReader { proxy in
-            let width = proxy.size.width / 2.77
+            let width = proxy.size.width / 2.4
             
-            TabView(selection: $selectedTab)
+            NavigationView
             {
-                NavigationView
+                TabView(selection: $selectedTab)
                 {
                     VStack
                     {
@@ -35,50 +39,38 @@ struct ContentView: View
                                 .environmentObject(vm)
                         }
                     }
+                    .tag(Tab.Home)
+                    .tabItem { Label(Tab.Home.label, systemImage: Tab.Home.tabIcon) }
                     .navigationBarHidden(true)
-                }
-                .tag(Tab.Home)
-                .tabItem { Label(Tab.Home.label, systemImage: Tab.Home.tabIcon) }
-                
-                NavigationView
-                {
+                    
                     VStack
                     {
                         
                     }
-                }
-                .tag(Tab.Search)
-                .tabItem { Label(Tab.Search.label, systemImage: Tab.Search.tabIcon) }
-                
-                NavigationView
-                {
+                    .tag(Tab.Search)
+                    .tabItem { Label(Tab.Search.label, systemImage: Tab.Search.tabIcon) }
+                    
                     VStack
                     {
                         
                     }
-                }
-                .tag(Tab.Camera)
-                .tabItem { Label(Tab.Camera.label, systemImage: Tab.Camera.tabIcon) }
-                
-                NavigationView
-                {
+                    .tag(Tab.Camera)
+                    .tabItem { Label(Tab.Camera.label, systemImage: Tab.Camera.tabIcon) }
+                    
                     VStack
                     {
                         
                     }
-                }
-                .tag(Tab.Notification)
-                .tabItem { Label(Tab.Notification.label, systemImage: Tab.Notification.tabIcon) }
-                
-                NavigationView
-                {
+                    .tag(Tab.Notification)
+                    .tabItem { Label(Tab.Notification.label, systemImage: Tab.Notification.tabIcon) }
+                    
                     VStack
                     {
                         
                     }
+                    .tag(Tab.Profile)
+                    .tabItem { Label(Tab.Profile.label, systemImage: Tab.Profile.tabIcon) }
                 }
-                .tag(Tab.Profile)
-                .tabItem { Label(Tab.Profile.label, systemImage: Tab.Profile.tabIcon) }
             }
         }
     }

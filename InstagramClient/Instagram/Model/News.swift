@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct News
+struct News: Identifiable
 {
+    var id = UUID()
     var subject: String
 }

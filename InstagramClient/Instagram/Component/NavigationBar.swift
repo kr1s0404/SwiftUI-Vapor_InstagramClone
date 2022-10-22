@@ -25,6 +25,7 @@ struct NavigationBar: View
                 .scaledToFit()
                 .frame(width: 20)
         }
+        .navigationBarHidden(true)
     }
 }
 

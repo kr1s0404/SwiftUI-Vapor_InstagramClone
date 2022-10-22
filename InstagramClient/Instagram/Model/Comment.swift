@@ -10,7 +10,7 @@ import Foundation
 struct Comment: Identifiable
 {
     var id = UUID()
-    var owner: User?
+    var owner: User
     var replyTo: User?
     var commentText: String
 }

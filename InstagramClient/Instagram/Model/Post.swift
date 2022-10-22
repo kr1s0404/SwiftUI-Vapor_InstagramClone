@@ -14,5 +14,5 @@ struct Post: Identifiable
     var desc: String
     var owner: User
     var likesCount: Int = Int.random(in: 0 ..< 1000)
-    var comments: [Comment]
+    var comments: [Comment]?
 }
