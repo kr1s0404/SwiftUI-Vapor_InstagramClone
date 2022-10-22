@@ -13,57 +13,68 @@ struct ContentView: View
     
     var body: some View
     {
-        TabView(selection: $selectedTab)
-        {
-            NavigationView
-            {
-                VStack
-                {
-                    
-                }
-            }
-            .tag(Tab.Home)
-            .tabItem { Label(Tab.Home.label, systemImage: Tab.Home.tabIcon) }
+        GeometryReader { proxy in
+            let width = proxy.size.width / 2.8
             
-            NavigationView
+            TabView(selection: $selectedTab)
             {
-                VStack
+                NavigationView
                 {
-                    
+                    VStack
+                    {
+                        NavigationBar(width: width)
+                        ScrollView(showsIndicators: false)
+                        {
+                            NewsView()
+                            StoryView()
+                            PostView(width: width)
+                        }
+                    }
+                    .navigationBarHidden(true)
                 }
-            }
-            .tag(Tab.Search)
-            .tabItem { Label(Tab.Search.label, systemImage: Tab.Search.tabIcon) }
-            
-            NavigationView
-            {
-                VStack
+                .tag(Tab.Home)
+                .tabItem { Label(Tab.Home.label, systemImage: Tab.Home.tabIcon) }
+                
+                NavigationView
                 {
-                    
+                    VStack
+                    {
+                        
+                    }
                 }
-            }
-            .tag(Tab.Camera)
-            .tabItem { Label(Tab.Camera.label, systemImage: Tab.Camera.tabIcon) }
-            
-            NavigationView
-            {
-                VStack
+                .tag(Tab.Search)
+                .tabItem { Label(Tab.Search.label, systemImage: Tab.Search.tabIcon) }
+                
+                NavigationView
                 {
-                    
+                    VStack
+                    {
+                        
+                    }
                 }
-            }
-            .tag(Tab.Notification)
-            .tabItem { Label(Tab.Notification.label, systemImage: Tab.Notification.tabIcon) }
-            
-            NavigationView
-            {
-                VStack
+                .tag(Tab.Camera)
+                .tabItem { Label(Tab.Camera.label, systemImage: Tab.Camera.tabIcon) }
+                
+                NavigationView
                 {
-                    
+                    VStack
+                    {
+                        
+                    }
                 }
+                .tag(Tab.Notification)
+                .tabItem { Label(Tab.Notification.label, systemImage: Tab.Notification.tabIcon) }
+                
+                NavigationView
+                {
+                    VStack
+                    {
+                        
+                    }
+                }
+                .tag(Tab.Profile)
+                .tabItem { Label(Tab.Profile.label, systemImage: Tab.Profile.tabIcon) }
             }
-            .tag(Tab.Profile)
-            .tabItem { Label(Tab.Profile.label, systemImage: Tab.Profile.tabIcon) }
         }
     }
 }

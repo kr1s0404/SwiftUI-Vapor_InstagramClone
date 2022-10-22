@@ -14,6 +14,13 @@
 		2FE39502290347D70078ADF3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE394FF290347D70078ADF3 /* Constants.swift */; };
 		2FE39503290347D70078ADF3 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE39500290347D70078ADF3 /* HttpClient.swift */; };
 		2FE39504290347D70078ADF3 /* SheetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE39501290347D70078ADF3 /* SheetType.swift */; };
+		2FE3950B290357240078ADF3 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE3950A290357240078ADF3 /* NavigationBar.swift */; };
+		2FE39510290359970078ADF3 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE3950F290359970078ADF3 /* Font.swift */; };
+		2FE3951229035B7C0078ADF3 /* OleoScript-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FE3950E290359590078ADF3 /* OleoScript-Regular.ttf */; };
+		2FE3951529035EBC0078ADF3 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE3951429035EBC0078ADF3 /* NewsView.swift */; };
+		2FE39517290361B70078ADF3 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE39516290361B70078ADF3 /* Person.swift */; };
+		2FE39519290364D90078ADF3 /* StoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE39518290364D90078ADF3 /* StoryView.swift */; };
+		2FE3951B29036ABD0078ADF3 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE3951A29036ABD0078ADF3 /* PostView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +32,15 @@
 		2FE394FF290347D70078ADF3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2FE39500290347D70078ADF3 /* HttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		2FE39501290347D70078ADF3 /* SheetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SheetType.swift; sourceTree = "<group>"; };
+		2FE3950A290357240078ADF3 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		2FE3950D290359590078ADF3 /* OleoScript-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OleoScript-Bold.ttf"; sourceTree = "<group>"; };
+		2FE3950E290359590078ADF3 /* OleoScript-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OleoScript-Regular.ttf"; sourceTree = "<group>"; };
+		2FE3950F290359970078ADF3 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		2FE3951129035AE20078ADF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2FE3951429035EBC0078ADF3 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		2FE39516290361B70078ADF3 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		2FE39518290364D90078ADF3 /* StoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
+		2FE3951A29036ABD0078ADF3 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +73,14 @@
 		2FE394EF290347A40078ADF3 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				2FE3951129035AE20078ADF3 /* Info.plist */,
 				2FE395082903482D0078ADF3 /* Lifecycle */,
 				2FE395062903481F0078ADF3 /* Model */,
 				2FE395052903481B0078ADF3 /* View */,
 				2FE39507290348240078ADF3 /* ViewModel */,
+				2FE39509290356FA0078ADF3 /* Component */,
 				2FE394FE290347D70078ADF3 /* Utilities */,
+				2FE3950C2903594D0078ADF3 /* Font */,
 				2FE394F4290347A60078ADF3 /* Assets.xcassets */,
 				2FE394F6290347A60078ADF3 /* Preview Content */,
 			);
@@ -90,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				2FE394F2290347A40078ADF3 /* ContentView.swift */,
+				2FE3951329035EAF0078ADF3 /* Home */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -97,6 +117,7 @@
 		2FE395062903481F0078ADF3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2FE39516290361B70078ADF3 /* Person.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -114,6 +135,34 @@
 				2FE394F0290347A40078ADF3 /* InstagramApp.swift */,
 			);
 			path = Lifecycle;
+			sourceTree = "<group>";
+		};
+		2FE39509290356FA0078ADF3 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				2FE3950A290357240078ADF3 /* NavigationBar.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		2FE3950C2903594D0078ADF3 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				2FE3950D290359590078ADF3 /* OleoScript-Bold.ttf */,
+				2FE3950E290359590078ADF3 /* OleoScript-Regular.ttf */,
+				2FE3950F290359970078ADF3 /* Font.swift */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		2FE3951329035EAF0078ADF3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2FE3951429035EBC0078ADF3 /* NewsView.swift */,
+				2FE39518290364D90078ADF3 /* StoryView.swift */,
+				2FE3951A29036ABD0078ADF3 /* PostView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +225,7 @@
 			files = (
 				2FE394F8290347A60078ADF3 /* Preview Assets.xcassets in Resources */,
 				2FE394F5290347A60078ADF3 /* Assets.xcassets in Resources */,
+				2FE3951229035B7C0078ADF3 /* OleoScript-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,11 +236,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FE39519290364D90078ADF3 /* StoryView.swift in Sources */,
 				2FE394F3290347A40078ADF3 /* ContentView.swift in Sources */,
+				2FE3951529035EBC0078ADF3 /* NewsView.swift in Sources */,
 				2FE394F1290347A40078ADF3 /* InstagramApp.swift in Sources */,
+				2FE39510290359970078ADF3 /* Font.swift in Sources */,
 				2FE39503290347D70078ADF3 /* HttpClient.swift in Sources */,
 				2FE39504290347D70078ADF3 /* SheetType.swift in Sources */,
+				2FE39517290361B70078ADF3 /* Person.swift in Sources */,
 				2FE39502290347D70078ADF3 /* Constants.swift in Sources */,
+				2FE3950B290357240078ADF3 /* NavigationBar.swift in Sources */,
+				2FE3951B29036ABD0078ADF3 /* PostView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +378,7 @@
 				DEVELOPMENT_TEAM = 46U3CJ7CE5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Instagram/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -351,6 +408,7 @@
 				DEVELOPMENT_TEAM = 46U3CJ7CE5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Instagram/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
