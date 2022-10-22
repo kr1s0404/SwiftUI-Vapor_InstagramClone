@@ -37,6 +37,7 @@ extension StoryView {
             Image(systemName: "person.circle")
                 .resizable()
                 .scaledToFit()
+                .frame(width: 60, height: 60)
                 .padding(3)
                 .clipShape(Circle())
                 .overlay(Circle().stroke(.green, lineWidth: 2))
@@ -55,9 +56,10 @@ extension StoryView {
             {
                 ZStack
                 {
-                    Image(systemName: person.image)
+                    Image(person.name)
                         .resizable()
-                        .scaledToFit()
+                        .scaledToFill()
+                        .frame(width: 60, height: 60)
                         .padding(3)
                         .clipShape(Circle())
                         .overlay(Circle().stroke(.green, lineWidth: 2))

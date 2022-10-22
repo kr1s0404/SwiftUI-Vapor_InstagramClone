@@ -18,22 +18,18 @@ class ApiService
 class PostApi
 {
     fileprivate static var posts: [Post] = [
-        Post(image: "", desc: "", owner: UserApi.users[1], comments: [CommentApi.comments[1],
-                                                                      CommentApi.comments[2],
-                                                                      CommentApi.comments[3],
-                                                                      CommentApi.comments[4]]),
-        Post(image: "", desc: "", owner: UserApi.users[2], comments: [CommentApi.comments[1],
-                                                                      CommentApi.comments[2],
-                                                                      CommentApi.comments[3],
-                                                                      CommentApi.comments[4]]),
-        Post(image: "", desc: "", owner: UserApi.users[3], comments: [CommentApi.comments[1],
-                                                                      CommentApi.comments[2],
-                                                                      CommentApi.comments[3],
-                                                                      CommentApi.comments[4]]),
-        Post(image: "", desc: "", owner: UserApi.users[4], comments: [CommentApi.comments[1],
-                                                                      CommentApi.comments[2],
-                                                                      CommentApi.comments[3],
-                                                                      CommentApi.comments[4]])
+        Post(image: "Kris", desc: "", owner: UserApi.users[0], comments: [CommentApi.comments[1],
+                                                                                 CommentApi.comments[2],
+                                                                                 CommentApi.comments[3],
+                                                                                 CommentApi.comments[4]]),
+        Post(image: "May", desc: "", owner: UserApi.users[1], comments: [CommentApi.comments[1],
+                                                                                 CommentApi.comments[2],
+                                                                                 CommentApi.comments[3],
+                                                                                 CommentApi.comments[4]]),
+        Post(image: "Tony", desc: "", owner: UserApi.users[2], comments: [CommentApi.comments[1],
+                                                                                 CommentApi.comments[2],
+                                                                                 CommentApi.comments[3],
+                                                                                 CommentApi.comments[4]])
     ]
     
     func getMyPosts(users: [User]) -> [Post]? {
@@ -46,12 +42,9 @@ class PostApi
 class UserApi
 {
     fileprivate static var users: [User] = [
-        User(name: "Kris", image: "person.circle"),
-        User(name: "May", image: "person.circle"),
-        User(name: "Tony", image: "person.circle"),
-        User(name: "Doris", image: "person.circle"),
-        User(name: "Kenny", image: "person.circle"),
-        User(name: "Troy", image: "person.circle")
+        User(name: "Kris"),
+        User(name: "May"),
+        User(name: "Tony")
     ]
     
     func getFollowing() -> [User] {
@@ -71,15 +64,15 @@ class UserApi
 class CommentApi
 {
     fileprivate static var comments: [Comment] = [
-        Comment(owner: UserApi.users[2], replyTo: UserApi.users[3], commentText: ""),
-        Comment(owner: UserApi.users[1], replyTo: UserApi.users[2], commentText: ""),
-        Comment(owner: UserApi.users[0], replyTo: UserApi.users[4], commentText: ""),
-        Comment(owner: UserApi.users[4], replyTo: UserApi.users[1], commentText: ""),
-        Comment(owner: UserApi.users[5], replyTo: UserApi.users[2], commentText: ""),
-        Comment(owner: UserApi.users[3], replyTo: UserApi.users[4], commentText: ""),
-        Comment(owner: UserApi.users[1], replyTo: UserApi.users[0], commentText: ""),
-        Comment(owner: UserApi.users[2], replyTo: UserApi.users[4], commentText: ""),
-        Comment(owner: UserApi.users[3], replyTo: UserApi.users[2], commentText: ""),
+        Comment(owner: UserApi.users[0], replyTo: UserApi.users[1], commentText: "1"),
+        Comment(owner: UserApi.users[1], replyTo: UserApi.users[2], commentText: "2"),
+        Comment(owner: UserApi.users[2], replyTo: UserApi.users[0], commentText: "3"),
+        Comment(owner: UserApi.users[0], replyTo: UserApi.users[1], commentText: "4"),
+        Comment(owner: UserApi.users[1], replyTo: UserApi.users[2], commentText: "5"),
+        Comment(owner: UserApi.users[2], replyTo: UserApi.users[0], commentText: "6"),
+        Comment(owner: UserApi.users[0], replyTo: UserApi.users[1], commentText: "7"),
+        Comment(owner: UserApi.users[1], replyTo: UserApi.users[2], commentText: "8"),
+        Comment(owner: UserApi.users[2], replyTo: UserApi.users[0], commentText: "9"),
     ]
     
     func getComment() -> [Comment] {

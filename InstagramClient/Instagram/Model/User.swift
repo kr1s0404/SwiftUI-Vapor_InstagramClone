@@ -11,7 +11,6 @@ struct User: Identifiable
 {
     var id = UUID()
     var name: String
-    var image: String
     var posts: [Post]?
 }
 

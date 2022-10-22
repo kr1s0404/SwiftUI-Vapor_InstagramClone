@@ -10,6 +10,7 @@ import SwiftUI
 struct PostView: View
 {
     @EnvironmentObject var vm: StoreData
+    @StateObject var postVM = PostViewModel()
     
     var width: CGFloat
     
@@ -34,6 +35,9 @@ struct PostView: View
                 
                 CommentSection(person: person)
             }
+        }
+        .onAppear {
+            postVM.setUserPost(users: vm.following)
         }
         .toolbar {
             ToolbarItem(placement: .keyboard) {
@@ -60,10 +64,10 @@ extension PostView {
     func PostHeader(person: User) -> some View {
         HStack
         {
-            Image(systemName: person.image)
+            Image(person.name)
                 .resizable()
-                .scaledToFit()
-                .frame(width: 40)
+                .scaledToFill()
+                .frame(width: 40, height: 40)
                 .padding(3)
                 .clipShape(Circle())
                 .overlay(Circle().stroke(.green, lineWidth: 2))
@@ -85,10 +89,17 @@ extension PostView {
     
     @ViewBuilder
     func PostImage(person: User) -> some View {
-        Image("placeholder")
-            .resizable()
-            .scaledToFill()
-            .frame(maxWidth: .infinity)
+        if let image = postVM.getUserPost(userID: person.id)?.image {
+            Image(image)
+                .resizable()
+                .scaledToFill()
+                .frame(maxWidth: .infinity)
+        } else {
+            Image("placeholder")
+                .resizable()
+                .scaledToFill()
+                .frame(maxWidth: .infinity)
+        }
     }
     
     @ViewBuilder
@@ -165,14 +176,18 @@ extension PostView {
 struct PostView_Previews: PreviewProvider
 {
     static let vm = StoreData()
+    static let postVM = PostViewModel()
     
     static var previews: some View
     {
         GeometryReader { proxy in
             let width = proxy.size.width / 2.77
-            
-            PostView(width: width)
-                .environmentObject(vm)
+            ScrollView
+            {
+                PostView(width: width)
+                    .environmentObject(vm)
+                    .environmentObject(postVM)
+            }
         }
     }
 }

@@ -26,7 +26,9 @@ struct NewsView: View
                         .font(.system(size: 12))
                     
                     Button {
-                        vm.showNews.toggle()
+                        withAnimation(.easeInOut) {
+                            vm.showNews.toggle()
+                        }
                     } label: {
                         Image(systemName: "xmark")
                             .resizable()
