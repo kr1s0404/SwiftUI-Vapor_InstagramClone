@@ -9,12 +9,14 @@ import SwiftUI
 
 struct ContentView: View
 {
+    @EnvironmentObject var vm: StoreData
+    
     @State private var selectedTab: Tab = .Home
     
     var body: some View
     {
         GeometryReader { proxy in
-            let width = proxy.size.width / 2.8
+            let width = proxy.size.width / 2.77
             
             TabView(selection: $selectedTab)
             {
@@ -26,8 +28,11 @@ struct ContentView: View
                         ScrollView(showsIndicators: false)
                         {
                             NewsView()
+                                .environmentObject(vm)
                             StoryView()
+                                .environmentObject(vm)
                             PostView(width: width)
+                                .environmentObject(vm)
                         }
                     }
                     .navigationBarHidden(true)
@@ -121,8 +126,11 @@ enum Tab: Hashable {
 // MARK: - Preview
 struct ContentView_Previews: PreviewProvider
 {
+    static let vm = StoreData()
+    
     static var previews: some View
     {
         ContentView()
+            .environmentObject(vm)
     }
 }

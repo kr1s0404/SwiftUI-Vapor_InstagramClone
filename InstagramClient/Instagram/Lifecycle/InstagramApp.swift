@@ -10,11 +10,23 @@ import SwiftUI
 @main
 struct InstagramApp: App
 {
+    @StateObject var vm = StoreData()
+    
     var body: some Scene
     {
         WindowGroup
         {
             ContentView()
+                .environmentObject(vm)
         }
+    }
+}
+
+class StoreData: ObservableObject
+{
+    @Published var following = [User]()
+    
+    init() {
+        following = ApiService.userApi.getFollowing()
     }
 }

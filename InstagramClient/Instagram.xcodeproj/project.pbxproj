@@ -18,9 +18,14 @@
 		2FE39510290359970078ADF3 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE3950F290359970078ADF3 /* Font.swift */; };
 		2FE3951229035B7C0078ADF3 /* OleoScript-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FE3950E290359590078ADF3 /* OleoScript-Regular.ttf */; };
 		2FE3951529035EBC0078ADF3 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE3951429035EBC0078ADF3 /* NewsView.swift */; };
-		2FE39517290361B70078ADF3 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE39516290361B70078ADF3 /* Person.swift */; };
+		2FE39517290361B70078ADF3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE39516290361B70078ADF3 /* User.swift */; };
 		2FE39519290364D90078ADF3 /* StoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE39518290364D90078ADF3 /* StoryView.swift */; };
 		2FE3951B29036ABD0078ADF3 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE3951A29036ABD0078ADF3 /* PostView.swift */; };
+		2FE3951D290387BD0078ADF3 /* DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE3951C290387BD0078ADF3 /* DoneButton.swift */; };
+		2FE3951F290388C90078ADF3 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE3951E290388C90078ADF3 /* Post.swift */; };
+		2FE39521290389240078ADF3 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE39520290389240078ADF3 /* Comment.swift */; };
+		2FE395232903895E0078ADF3 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE395222903895E0078ADF3 /* News.swift */; };
+		2FE3952629038A910078ADF3 /* MockUpData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE3952529038A910078ADF3 /* MockUpData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,9 +43,14 @@
 		2FE3950F290359970078ADF3 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		2FE3951129035AE20078ADF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2FE3951429035EBC0078ADF3 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
-		2FE39516290361B70078ADF3 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		2FE39516290361B70078ADF3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2FE39518290364D90078ADF3 /* StoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
 		2FE3951A29036ABD0078ADF3 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		2FE3951C290387BD0078ADF3 /* DoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneButton.swift; sourceTree = "<group>"; };
+		2FE3951E290388C90078ADF3 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		2FE39520290389240078ADF3 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		2FE395222903895E0078ADF3 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		2FE3952529038A910078ADF3 /* MockUpData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUpData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +89,7 @@
 				2FE395052903481B0078ADF3 /* View */,
 				2FE39507290348240078ADF3 /* ViewModel */,
 				2FE39509290356FA0078ADF3 /* Component */,
+				2FE3952429038A730078ADF3 /* Preview */,
 				2FE394FE290347D70078ADF3 /* Utilities */,
 				2FE3950C2903594D0078ADF3 /* Font */,
 				2FE394F4290347A60078ADF3 /* Assets.xcassets */,
@@ -117,7 +128,10 @@
 		2FE395062903481F0078ADF3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2FE39516290361B70078ADF3 /* Person.swift */,
+				2FE39516290361B70078ADF3 /* User.swift */,
+				2FE3951E290388C90078ADF3 /* Post.swift */,
+				2FE39520290389240078ADF3 /* Comment.swift */,
+				2FE395222903895E0078ADF3 /* News.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -141,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				2FE3950A290357240078ADF3 /* NavigationBar.swift */,
+				2FE3951C290387BD0078ADF3 /* DoneButton.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -163,6 +178,14 @@
 				2FE3951A29036ABD0078ADF3 /* PostView.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		2FE3952429038A730078ADF3 /* Preview */ = {
+			isa = PBXGroup;
+			children = (
+				2FE3952529038A910078ADF3 /* MockUpData.swift */,
+			);
+			path = Preview;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,11 +262,16 @@
 				2FE39519290364D90078ADF3 /* StoryView.swift in Sources */,
 				2FE394F3290347A40078ADF3 /* ContentView.swift in Sources */,
 				2FE3951529035EBC0078ADF3 /* NewsView.swift in Sources */,
+				2FE395232903895E0078ADF3 /* News.swift in Sources */,
+				2FE3952629038A910078ADF3 /* MockUpData.swift in Sources */,
+				2FE39521290389240078ADF3 /* Comment.swift in Sources */,
 				2FE394F1290347A40078ADF3 /* InstagramApp.swift in Sources */,
+				2FE3951F290388C90078ADF3 /* Post.swift in Sources */,
 				2FE39510290359970078ADF3 /* Font.swift in Sources */,
+				2FE3951D290387BD0078ADF3 /* DoneButton.swift in Sources */,
 				2FE39503290347D70078ADF3 /* HttpClient.swift in Sources */,
 				2FE39504290347D70078ADF3 /* SheetType.swift in Sources */,
-				2FE39517290361B70078ADF3 /* Person.swift in Sources */,
+				2FE39517290361B70078ADF3 /* User.swift in Sources */,
 				2FE39502290347D70078ADF3 /* Constants.swift in Sources */,
 				2FE3950B290357240078ADF3 /* NavigationBar.swift in Sources */,
 				2FE3951B29036ABD0078ADF3 /* PostView.swift in Sources */,
@@ -303,7 +331,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -357,7 +385,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -384,6 +412,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -414,6 +443,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

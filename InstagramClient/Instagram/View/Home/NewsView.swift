@@ -9,6 +9,8 @@ import SwiftUI
 
 struct NewsView: View
 {
+    @EnvironmentObject var vm: StoreData
+    
     var body: some View
     {
         HStack
@@ -27,7 +29,7 @@ struct NewsView: View
                 .frame(width: 12)
                 .foregroundColor(.secondary)
         }
-        .padding()
+        .padding(10)
     }
 }
 
